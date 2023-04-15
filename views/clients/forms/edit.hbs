@@ -1,0 +1,24 @@
+<h1> edytowanie; {{client.name}} , id: {{client.id}} </h1>
+
+<form method="POST" action="/client/{{client.id}}?_method=PUT">
+    <label>
+        <p>
+            Imie:
+        </p>
+        <p>
+            <input type="text" name="name" value="{{client.name}}">
+        </p>
+    </label>
+    <label>
+        <p>
+            E-mail:
+        </p>
+        <p>
+            <input type="text" name="email" value="{{client.email}}">
+            {{!-- {{warto dac type="email" ale cos sie mi pierdoli w codesandboxie}} --}}
+        </p>
+    </label>
+    <label>
+        <button type="submit"> zapisz </button>
+    </label>
+</form>

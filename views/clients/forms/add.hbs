@@ -1,0 +1,25 @@
+<h1> dodawnie nowego klienta do bazy </h1>
+
+{{!-- {{label otacza całosc ze jak sie kliknie w obszarze to wskazuje od razu miejsce}} --}}
+<form method="POST" action="/client">
+    <label>
+        <p>
+            Imie:
+        </p>
+        <p>
+            <input type="text" name="name">
+        </p>
+    </label>
+    <label>
+        <p>
+            E-mail:
+        </p>
+        <p>
+            <input type="text" name="email">
+            {{!-- {{warto dac type="email" ale cos sie mi pierdoli w codesandboxie}} --}}
+        </p>
+    </label>
+    <label>
+        <button type="submit"> zapisz </button>
+    </label>
+</form>

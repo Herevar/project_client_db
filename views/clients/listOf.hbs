@@ -1,0 +1,44 @@
+<h1> lista klientów <h1>
+{{!-- {{commented expressions}} --}}
+
+
+<table>
+
+    <thread>
+        <tr>
+            <th>
+                E-mail
+            </th>
+             <th>
+                Imie
+            </th>
+            <th>
+                action
+            </th>
+        </tr>
+    </thread>
+    <tbody>
+    {{#each clients}}
+        <th>
+            {{this.email}}
+        </th>
+        <td>
+            {{this.name}}
+        </td>
+        <td>
+            <a href='/client/{{this.id}}'> szczegóły </a>
+            <form method="POST" action="/client/del/{{this.id}}?_method=DELETE">
+                <button type="submit">Usuń</button>
+            </form>
+            
+        </td>
+    {{/each}}
+    </tbody>
+</table>
+
+{{!-- {{robimy fornularz poza restem, zeby sobie działał}} --}}
+
+<form method="GET" action="/client/form/add">
+{{!-- {{musimy dodac form bo poleci do /:id - ale pozniej sie moze przydac i tak}} --}}
+    <button type="submit"> dodaj nowego klienta </button>
+</form>

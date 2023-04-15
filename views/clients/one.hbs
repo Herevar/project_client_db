@@ -1,0 +1,32 @@
+<h1> {{client.name}} <h1>
+<table>  
+    <tbody>
+        <tr>
+            <th>
+                Imie
+            </th>
+            <td>
+                {{client.name}}
+            </td>
+        </tr>
+        <tr>    
+            <th>
+                E-mail
+            </th>
+            <td>
+                 {{client.email}}
+            </td>
+            
+         </tr>   
+    </tbody>
+</table>
+
+
+<p>
+    {{!-- {{trzeba przesłać też id, bo wiadomo ze dla kazdej pozycji bedzie inny formularz - 
+            z .get '/client/one' zostało tu przesłane parametry w "client: "}} --}}
+    <a href="/client/form/edit/{{client.id}}">edytuj dane</a>
+</p>
+<p>
+{{> go-to-clients}}
+</p>
