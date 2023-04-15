@@ -43,4 +43,4 @@ app.listen(3015, 'localhost', ()=> {console.log("listening on localhost 3015")})
 //package.json// "start": "npx nodemon index.js"
 //npx kill-port XXXX
 
-//test kolejny zmiany dla githuba
+//test 2 zmiany dla githuba
